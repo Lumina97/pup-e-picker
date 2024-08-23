@@ -1,1 +1,221 @@
-{"dogs":[{"name":"Nannie","image":"/assets/corgi.png","description":"inquisitively oof calm acupuncture whereas equatorial gosh effectuate","isFavorite":true,"id":0},{"name":"Brycen","image":"/assets/chihuahua.avif","description":"bottleful after baste obliterate putrid","isFavorite":false,"id":1},{"name":"Thurman","image":"/assets/boxer.png","description":"subtle though jade indeed before island aha","isFavorite":true,"id":2},{"name":"Orrin","image":"/assets/chihuahua.avif","description":"provided after despite till watcher","isFavorite":true,"id":3},{"name":"Lucie","image":"/assets/dalmation.png","description":"psst justly browsing all solid","isFavorite":false,"id":4},{"name":"Luella","image":"/assets/blue-heeler.png","description":"smoothly idolized naturally yum that till phew","isFavorite":false,"id":5},{"name":"Shannon","image":"/assets/cowardly.png","description":"invite insistent brr truthfully athwart bah straddle assassination","isFavorite":true,"id":6},{"name":"Imani","image":"/assets/dalmation.png","description":"rattle excluding skean on recovery","isFavorite":true,"id":7},{"name":"Danyka","image":"/assets/chihuahua.avif","description":"chillax daily sally however lest","isFavorite":true,"id":8},{"name":"Toby","image":"/assets/blue-heeler.png","description":"wildly forenenst rightfully till how","isFavorite":false,"id":9},{"name":"Tyson","image":"/assets/blue-heeler.png","description":"inequality maroon however nimble segregate","isFavorite":false,"id":10},{"name":"Eulalia","image":"/assets/boxer.png","description":"foolish rarely despite fooey frantically definitive jubilant dislike","isFavorite":true,"id":11},{"name":"Lawson","image":"/assets/cowardly.png","description":"uniform but wet cruelly knowledgeable","isFavorite":true,"id":12},{"name":"Cooper","image":"/assets/dalmation.png","description":"furthermore when righteously when handlebar breathe considering so","isFavorite":false,"id":13},{"name":"Melody","image":"/assets/chihuahua.avif","description":"demotivate above hmph exploit hatbox quaver these","isFavorite":false,"id":14},{"name":"Linda","image":"/assets/blue-heeler.png","description":"instead angelic kissingly easily apropos tempting crease","isFavorite":true,"id":15},{"name":"Dakota","image":"/assets/chihuahua.avif","description":"salad hopelessly loyally gah whoever","isFavorite":true,"id":16},{"name":"Stewart","image":"/assets/blue-heeler.png","description":"bad whoever obedient modulo investigation daily yum","isFavorite":true,"id":17},{"name":"Melyssa","image":"/assets/cowardly.png","description":"drat considering youthfully unfortunately whereas aside underline jealously","isFavorite":false,"id":18},{"name":"Korey","image":"/assets/chihuahua.avif","description":"loosely at bossy surprisingly friendly for well-lit seldom","isFavorite":false,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Lexus",
+      "image": "/assets/chihuahua.avif",
+      "description": "yahoo phooey vane at despite cytokine extinguish underestimate",
+      "isFavorite": false,
+      "id": 3
+    },
+    {
+      "name": "Carlie",
+      "image": "/assets/blue-heeler.png",
+      "description": "yet compassionate car instead before accidentally flood drat",
+      "isFavorite": false,
+      "id": 4
+    },
+    {
+      "name": "Deonte",
+      "image": "/assets/chihuahua.avif",
+      "description": "unlike well longingly since even that foolishly",
+      "isFavorite": false,
+      "id": 5
+    },
+    {
+      "name": "Elissa",
+      "image": "/assets/cowardly.png",
+      "description": "actual modulo affectionate sometimes canine awaken robust",
+      "isFavorite": false,
+      "id": 6
+    },
+    {
+      "name": "Alfonzo",
+      "image": "/assets/blue-heeler.png",
+      "description": "decisive aw wherever dislike alder unethically whenever radiate",
+      "isFavorite": true,
+      "id": 7
+    },
+    {
+      "name": "Owen",
+      "image": "/assets/cowardly.png",
+      "description": "to when semaphore jury boohoo",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Lucious",
+      "image": "/assets/cowardly.png",
+      "description": "wherever ugh during nor cohort",
+      "isFavorite": true,
+      "id": 9
+    },
+    {
+      "name": "Janelle",
+      "image": "/assets/chihuahua.avif",
+      "description": "xerox seemingly within juicy photoreceptor",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Reba",
+      "image": "/assets/boxer.png",
+      "description": "soggy abaft anglicise forewarn to recommendation and",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Kay",
+      "image": "/assets/corgi.png",
+      "description": "grubby loincloth so and some failing versus granular",
+      "isFavorite": true,
+      "id": 12
+    },
+    {
+      "name": "Haylie",
+      "image": "/assets/corgi.png",
+      "description": "including eek alligator excepting fingernail solidly freckle ah",
+      "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Rey",
+      "image": "/assets/dalmation.png",
+      "description": "once recollection worriedly below provided blah provided",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Ali",
+      "image": "/assets/cowardly.png",
+      "description": "till even whose fleck mmm which oof",
+      "isFavorite": true,
+      "id": 15
+    },
+    {
+      "name": "Tabitha",
+      "image": "/assets/blue-heeler.png",
+      "description": "ick gadzooks mattock excerpt ew",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Madaline",
+      "image": "/assets/corgi.png",
+      "description": "lye coincidence architecture bake subexpression pagan countryside",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Yoshiko",
+      "image": "/assets/dalmation.png",
+      "description": "lined qua broadly loose apud worrisome head",
+      "isFavorite": false,
+      "id": 18
+    },
+    {
+      "name": "Markus",
+      "image": "/assets/boxer.png",
+      "description": "modulo prevaricate actually kookily cool mew before",
+      "isFavorite": false,
+      "id": 19
+    },
+    {
+      "name": "lfsadgbhjoe",
+      "description": "`bfkshnogpsrogw'ynjh'arw",
+      "image": "/assets/cowardly.png",
+      "isFavorite": false,
+      "id": 20
+    },
+    {
+      "name": "lfsadgbhjoe",
+      "description": "`bfkshnogpsrogw'ynjh'arw",
+      "image": "/assets/cowardly.png",
+      "isFavorite": false,
+      "id": 21
+    },
+    {
+      "name": "testdsadas",
+      "description": "",
+      "image": "/assets/boxer.jpeg",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 23
+    },
+    {
+      "name": "32465767",
+      "description": "3245",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "",
+      "description": "",
+      "image": "",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "321412",
+      "description": "312421",
+      "image": "/assets/blue-heeler.png",
+      "isFavorite": false,
+      "id": 26
+    },
+    {
+      "name": "",
+      "description": "",
+      "image": "/assets/blue-heeler.png",
+      "isFavorite": false,
+      "id": 27
+    },
+    {
+      "name": "321453",
+      "description": "312",
+      "image": "/assets/boxer.jpeg",
+      "isFavorite": false,
+      "id": 28
+    },
+    {
+      "name": "123",
+      "description": "312",
+      "image": "/assets/boxer.jpeg",
+      "isFavorite": false,
+      "id": 29
+    },
+    {
+      "name": "test",
+      "description": "123",
+      "image": "/assets/cowardly.png",
+      "isFavorite": false,
+      "id": 30
+    },
+    {
+      "name": "123",
+      "description": "321",
+      "image": "",
+      "isFavorite": false,
+      "id": 31
+    },
+    {
+      "name": " ",
+      "description": " ",
+      "image": "/assets/blue-heeler.png",
+      "isFavorite": false,
+      "id": 32
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 33
+    }
+  ]
+}

@@ -1,10 +1,4 @@
-import { Requests } from "./api";
-
-const messAround = async () => {
-  // Write your test code in this function
-
-  await Requests.dummyFunction();
-};
+const messAround = async () => {};
 
 export const Playground = () => {
   return (
