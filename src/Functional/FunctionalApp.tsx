@@ -9,8 +9,8 @@ export function FunctionalApp() {
   const [isLoadingData, setIsLoadingData] = useState<boolean>(true);
   const [allDogs, setAllDogs] = useState<DogType[]>([]);
   const [activeTab, setActiveTab] = useState<TActiveTab>("all");
-  const isCreateDogShowing = activeTab === "createDog";
 
+  const isCreateDogShowing = activeTab === "createDog";
   const favoriteDogs = allDogs.filter((dog) => dog.isFavorite);
   const unFavoriteDogs = allDogs.filter((dog) => !dog.isFavorite);
 
@@ -21,64 +21,57 @@ export function FunctionalApp() {
     createDog: [],
   };
 
-  const deleteDog = (id: number): Promise<void | DogType[]> => {
+  const deleteDog = (id: number) => {
     setIsLoadingData(true);
     return Requests.deleteDog(id)
       .then(getAllDogs)
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoadingData(false);
       });
   };
 
-  const heartClicked = (
-    wasEmpty: boolean,
-    id: number
-  ): Promise<void | DogType[]> => {
+  const heartClicked = (wasEmpty: boolean, id: number) => {
     setIsLoadingData(true);
     return Requests.updateDog(id, { isFavorite: wasEmpty })
       .then(getAllDogs)
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoadingData(false);
       });
   };
 
-  const createDog = (
-    name: string,
-    description: string,
-    image: string
-  ): Promise<void | DogType[]> => {
+  const createDog = (dog: Omit<DogType, "id">) => {
     setIsLoadingData(true);
-    const dog: Omit<DogType, "id"> = {
-      name: name,
-      description: description,
-      image: image,
-      isFavorite: false,
-    };
 
     return Requests.postDog(dog)
       .then(() => getAllDogs())
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoadingData(false);
       });
   };
 
-  const getAllDogs = (): Promise<void | DogType[]> => {
+  const getAllDogs = () => {
     setIsLoadingData(true);
     return Requests.getAllDogs()
       .then((dogs) => {
         setAllDogs(dogs);
-        setIsLoadingData(false);
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoadingData(false);
       });
   };
 
-  //due to react running twice on page load during development
-  //this will trigger twice.
-  //meaning if you delete, fav or crate a dog while "getAllDogs" is still waiting for a response
-  //it will 'flicker' the disable key
-  //work around?
   useEffect(() => {
     getAllDogs();
   }, []);
@@ -91,8 +84,8 @@ export function FunctionalApp() {
       <FunctionalSection
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        favoritedDogsCount={favoriteDogs.length}
-        unFavoritedDogsCount={unFavoriteDogs.length}
+        favoriteDogsCount={favoriteDogs.length}
+        unFavoriteDogsCount={unFavoriteDogs.length}
       >
         {!isCreateDogShowing && (
           <FunctionalDogs

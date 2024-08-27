@@ -1,11 +1,14 @@
 // you can use `ReactNode` to add a type to the children prop
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { TActiveTab } from "../types";
+import { DogType, TActiveTab } from "../types";
 
 type SectionPropsType = {
   activeTab: TActiveTab;
-  setActiveTab: (value: TActiveTab) => void;
+  setNewStateData: (
+    key: "isLoadingData" | "allDogs" | "activeTab",
+    value: boolean | DogType[] | TActiveTab
+  ) => void;
   favoriteDogsCount: number;
   unFavoriteDogsCount: number;
   children: ReactNode;
@@ -13,9 +16,9 @@ type SectionPropsType = {
 
 export class ClassSection extends Component<SectionPropsType> {
   setActiveStates = (currentState: TActiveTab): void => {
-    const { activeTab, setActiveTab } = this.props;
+    const { activeTab, setNewStateData } = this.props;
     const valueToSet = currentState === activeTab ? "all" : currentState;
-    setActiveTab(valueToSet);
+    setNewStateData("activeTab", valueToSet);
   };
 
   render() {

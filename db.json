@@ -1,20 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Jerald",
-      "image": "/assets/chihuahua.avif",
-      "description": "ick amidst upon serpentine obnoxiously scary inasmuch",
-      "isFavorite": true,
-      "id": 13
-    },
-    {
-      "name": "Reymundo",
-      "image": "/assets/blue-heeler.png",
-      "description": "baggy fend shoemaker blah solder",
-      "isFavorite": false,
-      "id": 14
-    },
-    {
       "name": "Connor",
       "image": "/assets/dalmation.png",
       "description": "maul solemnly now tempting yet inasmuch ack whereas",
@@ -25,14 +11,14 @@
       "name": "Sven",
       "image": "/assets/cowardly.png",
       "description": "healthily unique lest precious wangle quiver pish",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 16
     },
     {
       "name": "Willa",
       "image": "/assets/chihuahua.avif",
       "description": "decimal veil baseboard crumble willing chain audit beyond",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
@@ -104,6 +90,20 @@
       "image": "/assets/chihuahua.avif",
       "isFavorite": false,
       "id": 27
+    },
+    {
+      "name": "32152345",
+      "description": "gfadsgadfes",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 28
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "image": "/assets/blue-heeler.png",
+      "isFavorite": false,
+      "id": 29
     }
   ]
 }

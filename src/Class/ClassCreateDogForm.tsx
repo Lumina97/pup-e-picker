@@ -6,18 +6,14 @@ import toast from "react-hot-toast";
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 type CreateDogPropsType = {
-  createDog: (
-    name: string,
-    description: string,
-    image: string
-  ) => Promise<void | DogType[]>;
+  createDog: (dog: Omit<DogType, "id">) => Promise<void>;
   isLoading: boolean;
 };
 
 type CreateDogStateType = {
-  nameInput: string;
-  descriptionInput: string;
-  imageInput: string;
+  name: string;
+  description: string;
+  image: string;
 };
 
 export class ClassCreateDogForm extends Component<
@@ -25,30 +21,33 @@ export class ClassCreateDogForm extends Component<
   CreateDogStateType
 > {
   state: CreateDogStateType = {
-    nameInput: "",
-    descriptionInput: "",
-    imageInput: defaultSelectedImage,
+    name: "",
+    description: "",
+    image: defaultSelectedImage,
   };
 
   clearForm = () => {
-    this.setState({ nameInput: "" });
-    this.setState({ descriptionInput: "" });
-    this.setState({ imageInput: defaultSelectedImage });
+    this.setState({ name: "" });
+    this.setState({ description: "" });
+    this.setState({ image: defaultSelectedImage });
   };
 
   render() {
     const { isLoading, createDog } = this.props;
+    const { name, description, image } = this.state;
+
     return (
       <form
         action=""
         id="create-dog-form"
         onSubmit={(e) => {
           e.preventDefault();
-          createDog(
-            this.state.nameInput,
-            this.state.descriptionInput,
-            this.state.imageInput
-          ).then(() => {
+          createDog({
+            name,
+            description,
+            image,
+            isFavorite: false,
+          }).then(() => {
             toast.success("Created dog!");
             this.clearForm();
           });
@@ -58,8 +57,8 @@ export class ClassCreateDogForm extends Component<
         <label htmlFor="name">Dog Name</label>
         <input
           type="text"
-          value={this.state.nameInput}
-          onChange={(e) => this.setState({ nameInput: e.target.value })}
+          value={this.state.name}
+          onChange={(e) => this.setState({ name: e.target.value })}
           disabled={isLoading}
         />
         <label htmlFor="description">Dog Description</label>
@@ -68,17 +67,17 @@ export class ClassCreateDogForm extends Component<
           id=""
           cols={80}
           rows={10}
-          value={this.state.descriptionInput}
+          value={this.state.description}
           onChange={(e) => {
-            this.setState({ descriptionInput: e.target.value });
+            this.setState({ description: e.target.value });
           }}
           disabled={isLoading}
         />
         <label htmlFor="picture">Select an Image</label>
         <select
-          value={this.state.imageInput}
+          value={this.state.image}
           onChange={(e) => {
-            this.setState({ imageInput: e.target.value });
+            this.setState({ image: e.target.value });
           }}
           disabled={isLoading}
         >

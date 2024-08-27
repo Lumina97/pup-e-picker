@@ -6,16 +6,16 @@ import { TActiveTab } from "../types";
 type SectionPropsType = {
   activeTab: TActiveTab;
   setActiveTab: Dispatch<SetStateAction<TActiveTab>>;
-  favoritedDogsCount: number;
-  unFavoritedDogsCount: number;
+  favoriteDogsCount: number;
+  unFavoriteDogsCount: number;
   children: ReactNode;
 };
 
 export const FunctionalSection = ({
   activeTab,
   setActiveTab,
-  favoritedDogsCount,
-  unFavoritedDogsCount,
+  favoriteDogsCount: favoriteDogsCount,
+  unFavoriteDogsCount: unFavoriteDogsCount,
   children,
 }: SectionPropsType) => {
   const setNewActiveState = (currentState: TActiveTab) => {
@@ -35,14 +35,14 @@ export const FunctionalSection = ({
             className={`selector ${activeTab === "favorite" && "active"}`}
             onClick={() => setNewActiveState("favorite")}
           >
-            favorited ({favoritedDogsCount})
+            favorited ({favoriteDogsCount})
           </div>
 
           <div
             className={`selector ${activeTab === "unFavorite" && "active"}`}
             onClick={() => setNewActiveState("unFavorite")}
           >
-            unfavorited ({unFavoritedDogsCount})
+            unfavorited ({unFavoriteDogsCount})
           </div>
           <div
             className={`selector ${activeTab === "createDog" && "active"}`}
