@@ -1,42 +1,26 @@
 // you can use this type for react children if you so choose
-import { ReactNode, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import { Link } from "react-router-dom";
+import { TActiveTab } from "../types";
 
 type SectionPropsType = {
-  setIsFavoriteShowing: (value: boolean) => void;
-  setIsNonFavoriteShowing: (value: boolean) => void;
-  setIsCreateDogShowing: (value: boolean) => void;
-  isCreateDogShowing: boolean;
-  showFavorites: boolean;
-  showNonFavorites: boolean;
-  favoritedDogs: number;
-  unFavoritedDogs: number;
+  activeTab: TActiveTab;
+  setActiveTab: Dispatch<SetStateAction<TActiveTab>>;
+  favoritedDogsCount: number;
+  unFavoritedDogsCount: number;
   children: ReactNode;
 };
 
 export const FunctionalSection = ({
-  setIsFavoriteShowing,
-  setIsNonFavoriteShowing,
-  setIsCreateDogShowing,
-  isCreateDogShowing,
-  showFavorites,
-  showNonFavorites,
-  favoritedDogs,
-  unFavoritedDogs,
+  activeTab,
+  setActiveTab,
+  favoritedDogsCount,
+  unFavoritedDogsCount,
   children,
 }: SectionPropsType) => {
-  const [favoriteActiveClass, setFavoriteActiveClass] = useState<string>("");
-  const [unfavoriteActiveClass, setUnfavoriteActiveClass] = useState<string>("");
-  const [createDogActiveClass, setCreateDogActiveClass] = useState<string>("");
-
-  const setActiveStates: (fav: boolean, unFav: boolean, createDog: boolean) => void = (fav, unFav, createDog) => {
-    fav ? setFavoriteActiveClass("active") : setFavoriteActiveClass("");
-    unFav ? setUnfavoriteActiveClass("active") : setUnfavoriteActiveClass("");
-    createDog ? setCreateDogActiveClass("active") : setCreateDogActiveClass("");
-
-    setIsFavoriteShowing(fav);
-    setIsNonFavoriteShowing(unFav);
-    setIsCreateDogShowing(createDog);
+  const setNewActiveState = (currentState: TActiveTab) => {
+    const valueToSet = currentState === activeTab ? "all" : currentState;
+    setActiveTab(valueToSet);
   };
 
   return (
@@ -47,14 +31,23 @@ export const FunctionalSection = ({
           Change to Class
         </Link>
         <div className="selectors">
-          <div className={`selector ${favoriteActiveClass}`} onClick={() => setActiveStates(!showFavorites, false, false)}>
-            favorited ({favoritedDogs})
+          <div
+            className={`selector ${activeTab === "favorite" && "active"}`}
+            onClick={() => setNewActiveState("favorite")}
+          >
+            favorited ({favoritedDogsCount})
           </div>
 
-          <div className={`selector ${unfavoriteActiveClass}`} onClick={() => setActiveStates(false, !showNonFavorites, false)}>
-            unfavorited ({unFavoritedDogs})
+          <div
+            className={`selector ${activeTab === "unFavorite" && "active"}`}
+            onClick={() => setNewActiveState("unFavorite")}
+          >
+            unfavorited ({unFavoritedDogsCount})
           </div>
-          <div className={`selector ${createDogActiveClass}`} onClick={() => setActiveStates(false, false, !isCreateDogShowing)}>
+          <div
+            className={`selector ${activeTab === "createDog" && "active"}`}
+            onClick={() => setNewActiveState("createDog")}
+          >
             create dog
           </div>
         </div>

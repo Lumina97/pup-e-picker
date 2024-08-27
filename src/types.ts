@@ -6,3 +6,5 @@ export type DogType = {
   isFavorite: boolean;
   id: number;
 };
+
+export type TActiveTab = "all" | "favorite" | "unFavorite" | "createDog";

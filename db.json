@@ -1,221 +1,109 @@
 {
   "dogs": [
     {
-      "name": "Lexus",
+      "name": "Jerald",
       "image": "/assets/chihuahua.avif",
-      "description": "yahoo phooey vane at despite cytokine extinguish underestimate",
-      "isFavorite": false,
-      "id": 3
-    },
-    {
-      "name": "Carlie",
-      "image": "/assets/blue-heeler.png",
-      "description": "yet compassionate car instead before accidentally flood drat",
-      "isFavorite": false,
-      "id": 4
-    },
-    {
-      "name": "Deonte",
-      "image": "/assets/chihuahua.avif",
-      "description": "unlike well longingly since even that foolishly",
-      "isFavorite": false,
-      "id": 5
-    },
-    {
-      "name": "Elissa",
-      "image": "/assets/cowardly.png",
-      "description": "actual modulo affectionate sometimes canine awaken robust",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
-      "name": "Alfonzo",
-      "image": "/assets/blue-heeler.png",
-      "description": "decisive aw wherever dislike alder unethically whenever radiate",
+      "description": "ick amidst upon serpentine obnoxiously scary inasmuch",
       "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Owen",
-      "image": "/assets/cowardly.png",
-      "description": "to when semaphore jury boohoo",
-      "isFavorite": true,
-      "id": 8
-    },
-    {
-      "name": "Lucious",
-      "image": "/assets/cowardly.png",
-      "description": "wherever ugh during nor cohort",
-      "isFavorite": true,
-      "id": 9
-    },
-    {
-      "name": "Janelle",
-      "image": "/assets/chihuahua.avif",
-      "description": "xerox seemingly within juicy photoreceptor",
-      "isFavorite": false,
-      "id": 10
-    },
-    {
-      "name": "Reba",
-      "image": "/assets/boxer.png",
-      "description": "soggy abaft anglicise forewarn to recommendation and",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Kay",
-      "image": "/assets/corgi.png",
-      "description": "grubby loincloth so and some failing versus granular",
-      "isFavorite": true,
-      "id": 12
-    },
-    {
-      "name": "Haylie",
-      "image": "/assets/corgi.png",
-      "description": "including eek alligator excepting fingernail solidly freckle ah",
-      "isFavorite": false,
       "id": 13
     },
     {
-      "name": "Rey",
-      "image": "/assets/dalmation.png",
-      "description": "once recollection worriedly below provided blah provided",
+      "name": "Reymundo",
+      "image": "/assets/blue-heeler.png",
+      "description": "baggy fend shoemaker blah solder",
       "isFavorite": false,
       "id": 14
     },
     {
-      "name": "Ali",
-      "image": "/assets/cowardly.png",
-      "description": "till even whose fleck mmm which oof",
-      "isFavorite": true,
+      "name": "Connor",
+      "image": "/assets/dalmation.png",
+      "description": "maul solemnly now tempting yet inasmuch ack whereas",
+      "isFavorite": false,
       "id": 15
     },
     {
-      "name": "Tabitha",
-      "image": "/assets/blue-heeler.png",
-      "description": "ick gadzooks mattock excerpt ew",
+      "name": "Sven",
+      "image": "/assets/cowardly.png",
+      "description": "healthily unique lest precious wangle quiver pish",
       "isFavorite": true,
       "id": 16
     },
     {
-      "name": "Madaline",
-      "image": "/assets/corgi.png",
-      "description": "lye coincidence architecture bake subexpression pagan countryside",
+      "name": "Willa",
+      "image": "/assets/chihuahua.avif",
+      "description": "decimal veil baseboard crumble willing chain audit beyond",
       "isFavorite": true,
       "id": 17
     },
     {
-      "name": "Yoshiko",
-      "image": "/assets/dalmation.png",
-      "description": "lined qua broadly loose apud worrisome head",
-      "isFavorite": false,
+      "name": "Faustino",
+      "image": "/assets/boxer.png",
+      "description": "calmly pish afore ack guideline",
+      "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Markus",
-      "image": "/assets/boxer.png",
-      "description": "modulo prevaricate actually kookily cool mew before",
-      "isFavorite": false,
+      "name": "Laron",
+      "image": "/assets/dalmation.png",
+      "description": "drat masculine painter bespeak hack um plateau foolishly",
+      "isFavorite": true,
       "id": 19
     },
     {
-      "name": "lfsadgbhjoe",
-      "description": "`bfkshnogpsrogw'ynjh'arw",
-      "image": "/assets/cowardly.png",
+      "name": "testdsa",
+      "description": "dasrfwqaraw",
+      "image": "/assets/corgi.png",
       "isFavorite": false,
       "id": 20
     },
     {
-      "name": "lfsadgbhjoe",
-      "description": "`bfkshnogpsrogw'ynjh'arw",
-      "image": "/assets/cowardly.png",
+      "name": "3215623",
+      "description": "32154",
+      "image": "/assets/corgi.png",
       "isFavorite": false,
       "id": 21
     },
     {
-      "name": "testdsadas",
-      "description": "",
-      "image": "/assets/boxer.jpeg",
+      "name": "123",
+      "description": "213",
+      "image": "/assets/blue-heeler.png",
       "isFavorite": false,
       "id": 22
     },
     {
-      "name": "test",
-      "description": "test",
-      "image": "/assets/chihuahua.avif",
+      "name": "123",
+      "description": "123",
+      "image": "/assets/blue-heeler.png",
       "isFavorite": false,
       "id": 23
     },
     {
-      "name": "32465767",
-      "description": "3245",
-      "image": "/assets/chihuahua.avif",
+      "name": "123",
+      "description": "321",
+      "image": "/assets/corgi.png",
       "isFavorite": false,
       "id": 24
     },
     {
-      "name": "",
-      "description": "",
-      "image": "",
+      "name": "98bmn,",
+      "description": "cvghfd",
+      "image": "/assets/dalmation.png",
       "isFavorite": false,
       "id": 25
     },
     {
-      "name": "321412",
-      "description": "312421",
+      "name": "123",
+      "description": "123",
       "image": "/assets/blue-heeler.png",
       "isFavorite": false,
       "id": 26
     },
     {
-      "name": "",
-      "description": "",
-      "image": "/assets/blue-heeler.png",
-      "isFavorite": false,
-      "id": 27
-    },
-    {
-      "name": "321453",
-      "description": "312",
-      "image": "/assets/boxer.jpeg",
-      "isFavorite": false,
-      "id": 28
-    },
-    {
-      "name": "123",
-      "description": "312",
-      "image": "/assets/boxer.jpeg",
-      "isFavorite": false,
-      "id": 29
-    },
-    {
-      "name": "test",
-      "description": "123",
-      "image": "/assets/cowardly.png",
-      "isFavorite": false,
-      "id": 30
-    },
-    {
-      "name": "123",
-      "description": "321",
-      "image": "",
-      "isFavorite": false,
-      "id": 31
-    },
-    {
-      "name": " ",
-      "description": " ",
-      "image": "/assets/blue-heeler.png",
-      "isFavorite": false,
-      "id": 32
-    },
-    {
       "name": "123",
       "description": "123",
       "image": "/assets/chihuahua.avif",
       "isFavorite": false,
-      "id": 33
+      "id": 27
     }
   ]
 }

@@ -1,8 +1,18 @@
-export const baseUrl = "http://localhost:3000";
 import { DogType } from "./types";
+export const baseUrl = "http://localhost:3000";
 
 export const Requests = {
-  getAllDogs: (): Promise<DogType[]> => fetch(baseUrl + "/dogs").then((response) => response.json()),
+  getAllDogs: (): Promise<DogType[]> =>
+    fetch(baseUrl + "/dogs")
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Request failed: ${response.statusText}`);
+
+        return response.json();
+      })
+      .catch((error) => {
+        throw new Error(`Request failed: ${error}`);
+      }),
 
   postDog: (dog: Omit<DogType, "id">): Promise<DogType[]> =>
     fetch(`${baseUrl}/dogs`, {
@@ -11,22 +21,46 @@ export const Requests = {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => response.json()),
+    })
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Request failed: ${response.statusText}`);
+        return response.json();
+      })
+      .catch((error) => {
+        throw new Error(`Request failed: ${error}`);
+      }),
 
-  deleteDog: (id: number) =>
+  deleteDog: (id: number): Promise<void> =>
     fetch(`${baseUrl}/dogs/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => response.json()),
+    })
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Request failed: ${response.statusText}`);
+        return response.json();
+      })
+      .catch((error) => {
+        throw new Error(`Request failed: ${error}`);
+      }),
 
-  updateDog: (dog: DogType): Promise<DogType[]> =>
-    fetch(`${baseUrl}/dogs/${dog.id}`, {
-      body: JSON.stringify(dog),
+  updateDog: (id: number, part: { isFavorite: boolean }): Promise<DogType[]> =>
+    fetch(`${baseUrl}/dogs/${id}`, {
+      body: JSON.stringify(part),
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => response.json()),
+    })
+      .then((response) => {
+        if (!response.ok)
+          throw new Error(`Request failed: ${response.statusText}`);
+        return response.json();
+      })
+      .catch((error) => {
+        throw new Error(`Request failed: ${error}`);
+      }),
 };

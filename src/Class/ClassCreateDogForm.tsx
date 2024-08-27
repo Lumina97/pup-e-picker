@@ -1,13 +1,16 @@
 import { Component } from "react";
 import { dogPictures } from "../dog-pictures";
-import { Requests } from "../api";
 import { DogType } from "../types";
+import toast from "react-hot-toast";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 type CreateDogPropsType = {
-  getAllDogs: () => void;
-  setIsLoading: (value: boolean) => void;
+  createDog: (
+    name: string,
+    description: string,
+    image: string
+  ) => Promise<void | DogType[]>;
   isLoading: boolean;
 };
 
@@ -17,42 +20,48 @@ type CreateDogStateType = {
   imageInput: string;
 };
 
-export class ClassCreateDogForm extends Component<CreateDogPropsType, CreateDogStateType> {
+export class ClassCreateDogForm extends Component<
+  CreateDogPropsType,
+  CreateDogStateType
+> {
   state: CreateDogStateType = {
     nameInput: "",
     descriptionInput: "",
-    imageInput: "",
+    imageInput: defaultSelectedImage,
   };
 
-  createDog = () => {
-    this.props.setIsLoading(true);
-
-    this.state.imageInput === null && this.setState({ imageInput: defaultSelectedImage });
-
-    const dog: Omit<DogType, "id"> = {
-      name: this.state.nameInput,
-      description: this.state.descriptionInput,
-      image: this.state.imageInput,
-      isFavorite: false,
-    };
-    this.setState({ nameInput: " ", descriptionInput: " ", imageInput: defaultSelectedImage });
-    Requests.postDog(dog).then(this.props.getAllDogs);
+  clearForm = () => {
+    this.setState({ nameInput: "" });
+    this.setState({ descriptionInput: "" });
+    this.setState({ imageInput: defaultSelectedImage });
   };
 
   render() {
-    const { isLoading } = this.props;
+    const { isLoading, createDog } = this.props;
     return (
       <form
         action=""
         id="create-dog-form"
         onSubmit={(e) => {
           e.preventDefault();
-          this.createDog();
+          createDog(
+            this.state.nameInput,
+            this.state.descriptionInput,
+            this.state.imageInput
+          ).then(() => {
+            toast.success("Created dog!");
+            this.clearForm();
+          });
         }}
       >
         <h4>Create a New Dog</h4>
         <label htmlFor="name">Dog Name</label>
-        <input type="text" value={this.state.nameInput} onChange={(e) => this.setState({ nameInput: e.target.value })} disabled={isLoading} />
+        <input
+          type="text"
+          value={this.state.nameInput}
+          onChange={(e) => this.setState({ nameInput: e.target.value })}
+          disabled={isLoading}
+        />
         <label htmlFor="description">Dog Description</label>
         <textarea
           name=""

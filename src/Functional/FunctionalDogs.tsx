@@ -1,30 +1,18 @@
 import { DogCard } from "../Shared/DogCard";
-import { Requests } from "../api";
 import { DogType } from "../types";
 
 // Right now these dogs are constant, but in reality we should be getting these from our server
 export const FunctionalDogs = ({
-  setIsLoading,
   isLoading,
   dogsToShow,
-  getAllDogs,
+  deleteDog,
+  heartClicked,
 }: {
-  setIsLoading: (value: boolean) => void;
   isLoading: boolean;
   dogsToShow: DogType[];
-  getAllDogs: () => void;
+  deleteDog: (id: number) => Promise<void | DogType[]>;
+  heartClicked: (wasEmpty: boolean, id: number) => Promise<void | DogType[]>;
 }) => {
-  const deleteDog = (dog: DogType) => {
-    setIsLoading(true);
-    Requests.deleteDog(dog.id).then(getAllDogs);
-  };
-
-  const heartClicked = (wasEmpty: boolean, dog: DogType): void => {
-    setIsLoading(true);
-    dog.isFavorite = wasEmpty;
-    Requests.updateDog(dog).then(getAllDogs);
-  };
-
   return (
     <>
       {dogsToShow.length > 0 &&
@@ -40,13 +28,13 @@ export const FunctionalDogs = ({
               }}
               key={dog.id}
               onTrashIconClick={() => {
-                deleteDog(dog);
+                deleteDog(dog.id);
               }}
               onHeartClick={() => {
-                heartClicked(false, { ...dog });
+                heartClicked(false, dog.id);
               }}
               onEmptyHeartClick={() => {
-                heartClicked(true, { ...dog });
+                heartClicked(true, dog.id);
               }}
               isLoading={isLoading}
             />

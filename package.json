@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "serve": "json-server --watch db.json",
-    "serve:slow": "json-server --watch db.json --delay 2000",
+    "serve:slow": "json-server --watch db.json --delay 1000",
     "typecheck": "tsc --noEmit",
     "seed": "node reseed-db.js",
     "build": "tsc && vite build",

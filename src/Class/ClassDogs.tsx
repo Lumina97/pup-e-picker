@@ -1,30 +1,18 @@
 import { DogCard } from "../Shared/DogCard";
 import { Component } from "react";
 import { DogType } from "../types";
-import { Requests } from "../api";
 
 type ClassDogPropType = {
   dogsToShow: DogType[];
   isLoading: boolean;
-  getAllDogs: () => void;
-  setIsLoading: (value: boolean) => void;
+  deleteDog: (id: number) => Promise<void | DogType[]>;
+  heartClicked: (wasEmpty: boolean, id: number) => Promise<void | DogType[]>;
 };
 
 // Right now these dogs are constant, but in reality we should be getting these from our server
 export class ClassDogs extends Component<ClassDogPropType> {
-  deleteDog = (dog: DogType) => {
-    this.props.setIsLoading(true);
-    Requests.deleteDog(dog.id).then(this.props.getAllDogs);
-  };
-
-  heartClicked = (wasEmpty: boolean, dog: DogType): void => {
-    this.props.setIsLoading(true);
-    dog.isFavorite = wasEmpty;
-    Requests.updateDog(dog).then(this.props.getAllDogs);
-  };
-
   render() {
-    const { dogsToShow, isLoading } = this.props;
+    const { dogsToShow, isLoading, deleteDog, heartClicked } = this.props;
     return (
       <>
         {dogsToShow.length > 0 &&
@@ -40,13 +28,13 @@ export class ClassDogs extends Component<ClassDogPropType> {
                 }}
                 key={dog.id}
                 onTrashIconClick={() => {
-                  this.deleteDog(dog);
+                  deleteDog(dog.id);
                 }}
                 onHeartClick={() => {
-                  this.heartClicked(false, { ...dog });
+                  heartClicked(false, dog.id);
                 }}
                 onEmptyHeartClick={() => {
-                  this.heartClicked(true, { ...dog });
+                  heartClicked(true, dog.id);
                 }}
                 isLoading={isLoading}
               />
